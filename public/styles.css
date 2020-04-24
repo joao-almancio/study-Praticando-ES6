@@ -16,13 +16,47 @@ header {
     height: 60px;
     background: #3878d3;
 
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 18px;
-    font-weight: bold;
-    color: #ffffff;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 28px;
+    color: #fafafa;
 
     display: flex;
 
     justify-content: center;
     align-items: center;
+}
+
+
+form {
+    height: 40px;
+    width: 80%;
+    max-width: 600px;
+    margin: 10px auto;
+    border: 3px solid #dadada;
+
+    background: #fafafa;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    flex-wrap: wrap;
+}
+    
+input {
+    flex-basis: 70%;
+}
+
+button {
+    background-color: #fafafa;
+    border: solid 3px #3878d3;
+    border-radius: 5px;
+
+    flex-basis: 20%;
+    min-width: 100px;
+
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    color: #3878d3;
 }
