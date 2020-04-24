@@ -3,14 +3,35 @@ import api from './api';
 class App {
     constructor () {
         this.userList = [];
+
+        this.formEl = document.getElementById('repo-form');
+        this.inputEl = document.getElementById('repo-input');
+
+        this.eventHandler();
     }
 
-    async addUsuario(usuario) {
+    eventHandler() {
+        this.formEl.onsubmit = event => {
+            event.preventDefault();
+            this.addUsuario();
+        }
+    }
+
+    async addUsuario() {
+        let usuario = this.inputEl.value;
+
+        if (usuario == 0) {
+            return
+        }
+
         try {
-               this.userList = await api.get(usuario);
+               let data = await api.get(usuario);
+               this.userList.push(data);
+
+               this.inputEl.value = '';
         }
         catch (err) {
-            console.log('Usuario inexistente. Tente outro');
+            alert(`Usuario "${usuario}" inexistente. Tente otro nome.`);
         }
     }
 }
