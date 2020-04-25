@@ -63,7 +63,7 @@ class App {
             let linkEl = document.createElement('a');
             linkEl.setAttribute('target', '_blank');
             linkEl.setAttribute('href', item.html_url);
-            linkEl.appendChild(document.createTextNode(item.html_url));
+            linkEl.appendChild(document.createTextNode('Acessar'));
 
             liEl.appendChild(imgEl);
             liEl.appendChild(titleEl);

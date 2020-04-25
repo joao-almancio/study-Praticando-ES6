@@ -3,6 +3,8 @@
     padding: 0;
     outline: 0;
     box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
 }
 
 body {
@@ -32,7 +34,7 @@ form {
     width: 80%;
     max-width: 600px;
     margin: 10px auto;
-    border: 3px solid #dadada;
+    border: 1px solid #dadada;
 
     background: #fafafa;
 
@@ -59,4 +61,60 @@ button {
     font-size: 10px;
     font-weight: bold;
     color: #3878d3;
+
+    cursor: pointer;
+}
+
+ul {
+    width: 80%;
+    margin: 10px auto;
+}
+
+li {
+    display: grid;
+    grid-template-columns: 65px 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "foto nome" "foto pais" "foto site";
+
+    justify-content: center;
+    align-items: center;
+
+    border: solid 3px #fafafa;
+
+    margin-bottom: 5px;
+}
+
+img {
+    grid-area: foto;
+    width: 100%;
+    justify-self: center;
+}
+
+strong {
+    grid-area: nome;
+    margin-left: 5px;
+}
+
+p {
+    grid-area: pais;
+    margin-left: 5px;
+
+    font-size: 14px;
+}
+
+a {
+    grid-area: site;
+    margin-left: 5px;
+    width:100%;
+    
+    border: solid #3878d3 1px;
+    border-radius: 5px;
+
+    background: #3878d3;
+
+    font-weight: bold;
+    color: #fafafa;
+    text-align: center;
+
+    cursor: pointer;
 }
